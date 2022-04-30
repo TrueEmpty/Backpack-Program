@@ -106,22 +106,22 @@ public class TextFileManager : MonoBehaviour
                             case "Pa_":
                                 Parents pr = new Parents(data);
                                 db.AddNew(pr);
-                                ConsoleManager.instance.Write("New Parent [" + nam + "] loaded");
+                                ConsoleManager.instance.Write("New Parent [" + pr.GetFullName() + "] loaded");
                                 break;
                             case "Sc_":
                                 Schools sr = new Schools(data);
                                 db.AddNew(sr);
-                                ConsoleManager.instance.Write("New School [" + nam + "] loaded");
+                                ConsoleManager.instance.Write("New School [" + sr.SchoolName + "] loaded");
                                 break;
                             case "Pu_":
                                 PickUpTimes tr = new PickUpTimes(data);
                                 db.AddNew(tr);
-                                ConsoleManager.instance.Write("New Pickup Time [" + nam + "] loaded");
+                                ConsoleManager.instance.Write("New Pickup Time [" + tr.Times + "] loaded");
                                 break;
                             case "Ch_":
                                 Children cr = new Children(data);
                                 db.AddNew(cr);
-                                ConsoleManager.instance.Write("New Child [" + nam + "] loaded");
+                                ConsoleManager.instance.Write("New Child [" + cr.GetName() + "] loaded");
                                 break;
                             default:
                                 ConsoleManager.instance.Write("Location for [" + nam + "] can not be found");
